@@ -1,0 +1,1 @@
+from .auth.received import controller as auth_controller
