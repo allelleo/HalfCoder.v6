@@ -13,3 +13,14 @@ app.include_router(auth_controller, prefix='/api/v1/adapter/auth', tags=['auth',
 from app.database import init
 
 init(app)  # Initialize database
+
+from fastapi.middleware.cors import CORSMiddleware
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
