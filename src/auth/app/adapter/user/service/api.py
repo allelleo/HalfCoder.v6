@@ -22,6 +22,7 @@ class APIClient:
                 )
             except Exception as e:
                 print(e)
+                raise e
                 raise CallServiceHTTPException
         return response
 
